@@ -1,0 +1,215 @@
+<html>
+  <head>
+  <meta charset="utf-8">
+  <style type="text/css">
+  body {
+  margin: 0;
+  }
+  #main {
+  height: 100%;
+  }
+  #map1 img {
+    width:100vw;
+  }
+  </style>
+  </head>
+  <body>
+  <div id="main"></div>
+  <div id="map1"><img src="./map.png" /></div>
+  <div id="map2">
+  <script src="./js/echarts.js"></script>
+  <script src = "./js/echarts-all.js"></script>
+  <script>
+  var myChart = echarts.init(document.getElementById("main"));
+
+  var optionID_20171028165540_525773 = 
+{
+  backgroundColor: '#1b1b1b',
+  color: ['gold','aqua','lime'],
+  title : {
+  text: '',
+  subtext:'',
+  x:'center',
+  textStyle : {
+  color: '#fff'
+  }
+  },
+  tooltip : {
+  trigger: 'item',
+  formatter: '{b}'
+  },
+  toolbox: {
+  show : true,
+  orient : 'vertical',
+  x: 'right',
+  y: 'center',
+  feature : {
+  mark : {show: true},
+  dataView : {show: true, readOnly: false},
+  restore : {show: true},
+  saveAsImage : {show: true}
+  }
+  },
+  dataRange: {
+  min : 0,
+  show: false,
+  max : 100,
+  y: '60%',
+  calculable : true,
+  color: ['#ff3333', 'orange', 'yellow','lime','aqua']
+  },
+
+  series : [
+  {
+  type:'map',
+  itemStyle:{
+  normal:{
+  borderColor:'rgba(100,149,237,1)',
+  borderWidth: 0.5,
+  areaStyle:{
+  color: '#1b1b1b'
+  }
+  }
+  },
+  data:[],
+  geoCoord: {'潮州': [116.62947,23.662623],
+'桃源县': [111.495407,28.908694],
+'邵阳': [111.474433,27.24527],
+'湘阴县': [112.889522,28.676676],
+'长沙市': [112.945473,28.234889],
+'衡南县': [112.684403,26.744532],
+'蓝山县': [112.203435,25.375935],
+'永州市': [111.619455,26.425864],
+'赤峰市': [118.89552,42.261686],
+'衡阳县': [112.377553,26.975295],
+'益阳市': [112.361516,28.559711],
+'锦州市': [121.132596,41.100931],
+'福清市': [119.390465,25.726343],
+'广西百色': [106.624589,23.908186],
+'聊城市': [115.991588,36.462758],
+'天津市': [117.209523,39.093668],
+'海门市': [121.188436,31.873612],
+'新疆': [87.633473,43.799238],
+'博乐市': [82.057972,44.86001],
+'绍兴市': [120.585478,30.036369],
+'石家庄市': [114.521532,38.048312],
+'十堰市': [110.80453,32.635062],
+'南阳市': [112.534501,32.996562],
+'会宁县': [105.059607,35.698508],
+'北京': [116.413554,39.911013],
+'广州': [113.270793,23.135308],
+'包头': [109.846755,40.663636],
+'衡阳': [112.578397,26.899517],
+'哈尔滨': [126.542417,45.807782],
+'长沙': [112.945333,28.233971]},
+
+  markLine : {
+  smooth:true,
+  effect : {
+  show: true,
+  scaleSize: 1,
+  period: 30,
+  color: '#fff',
+  shadowBlur: 10
+  },
+  itemStyle : {
+  color: 'red',
+  normal: {
+  borderWidth:1,
+  lineStyle: {
+  type: 'solid',
+  shadowBlur: 10
+  },
+  label:{show:false}
+  }
+  },
+
+  data : [
+  [{name:'潮州'}, {name:'长沙',value: 90}],
+[{name:'北京'}, {name:'长沙',value: 60}],
+[{name:'广州'}, {name:'长沙',value: 10}],
+[{name:'包头'}, {name:'长沙',value: 90}],
+[{name:'衡阳'}, {name:'长沙',value: 10}],
+[{name:'桃源县'}, {name:'长沙',value:100}],
+[{name:'邵阳'}, {name:'长沙',value: 30}],
+[{name:'湘阴县'}, {name:'长沙',value:100}],
+[{name:'长沙市'}, {name:'长沙',value: 30}],
+[{name:'衡南县'}, {name:'长沙',value: 40}],
+[{name:'蓝山县'}, {name:'长沙',value: 60}],
+[{name:'长沙市'}, {name:'长沙',value:  0}],
+[{name:'永州市'}, {name:'长沙',value: 60}],
+[{name:'赤峰市'}, {name:'长沙',value:  0}],
+[{name:'衡阳县'}, {name:'长沙',value: 20}],
+[{name:'益阳市'}, {name:'长沙',value: 60}],
+[{name:'锦州市'}, {name:'长沙',value: 60}],
+[{name:'福清市'}, {name:'长沙',value: 40}],
+[{name:'广西百色'}, {name:'长沙',value:100}],
+[{name:'聊城市'}, {name:'长沙',value: 70}],
+[{name:'天津市'}, {name:'长沙',value: 50}],
+[{name:'海门市'}, {name:'长沙',value: 60}],
+[{name:'新疆'}, {name:'长沙',value:  0}],
+[{name:'博乐市'}, {name:'长沙',value: 10}],
+[{name:'哈尔滨'}, {name:'长沙',value: 50}],
+[{name:'绍兴市'}, {name:'长沙',value: 90}],
+[{name:'石家庄市'}, {name:'长沙',value: 30}],
+[{name:'十堰市'}, {name:'长沙',value: 40}],
+[{name:'南阳市'}, {name:'长沙',value: 50}],
+[{name:'会宁县'}, {name:'长沙',value: 30}]
+  ]
+  },
+  markPoint : {
+  symbol:'emptyCircle',
+  symbolSize : function (v){
+  return 10 + v/10
+  },
+  effect : {
+  show: true,
+  shadowBlur : 0
+  },
+  itemStyle:{
+  normal:{
+  label:{show:true}
+  }
+  },
+  data : [
+  {name:'长沙',value: 90},
+{name:'长沙',value: 60},
+{name:'长沙',value: 10},
+{name:'长沙',value: 90},
+{name:'长沙',value: 10},
+{name:'长沙',value:100},
+{name:'长沙',value: 30},
+{name:'长沙',value:100},
+{name:'长沙',value: 30},
+{name:'长沙',value: 40},
+{name:'长沙',value: 60},
+{name:'长沙',value:  0},
+{name:'长沙',value: 60},
+{name:'长沙',value:  0},
+{name:'长沙',value: 20},
+{name:'长沙',value: 60},
+{name:'长沙',value: 60},
+{name:'长沙',value: 40},
+{name:'长沙',value:100},
+{name:'长沙',value: 70},
+{name:'长沙',value: 50},
+{name:'长沙',value: 60},
+{name:'长沙',value:  0},
+{name:'长沙',value: 10},
+{name:'长沙',value: 50},
+{name:'长沙',value: 90},
+{name:'长沙',value: 30},
+{name:'长沙',value: 40},
+{name:'长沙',value: 50},
+{name:'长沙',value: 30}
+  ]
+  }
+  }
+  ]
+  }
+;
+  myChart.setOption(optionID_20171028165540_525773);
+  </script>
+</div>
+  </body>
+  </html>
